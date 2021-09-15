@@ -4,7 +4,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 ## ➲ Project description
-In this Data Science Project, we will show how to detect email spam using Machine Learning technique called Natural Language Processing and Python.
+In this Machine Learning Project, we will show how to detect email spam using Machine Learning technique called Natural Language Processing and Python.
 
 <!-- PREREQUISTIES -->
 ## ➲ Prerequisites
