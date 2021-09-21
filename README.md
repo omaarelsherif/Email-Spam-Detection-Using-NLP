@@ -50,5 +50,6 @@ These links may help you to better understanding of the project idea and techniq
 
 <!-- CONTACT -->
 ## ➲ Contact
-- E-mail :  [omaarelsherif@gmail.com](mailto:omaarelsherif@gmail.com)
+- E-mail   : [omaarelsherif@gmail.com](mailto:omaarelsherif@gmail.com)
+- LinkedIn : https://www.linkedin.com/in/omaarelsherif/
 - Facebook : https://www.facebook.com/omaarelshereif
