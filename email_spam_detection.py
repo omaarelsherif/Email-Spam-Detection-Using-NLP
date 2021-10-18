@@ -1,7 +1,8 @@
 ### Email spam Detection ##
 """
 Description:
-              In this Data Science Project, we will show how to detect email spam using Machine Learning technique called Natural Language Processing and Python.
+              Email spam detection system is used to detect email spam using Machine Learning technique called Natural Language Processing and Python,
+              where we have a dataset contain a lot of emails by extract important words and then use naive classifier we can detect if this email is spam or not.
 """
 
 ## Importing modules ##
@@ -48,13 +49,12 @@ X_train, X_test, y_train, y_test = train_test_split(message, dataset['spam'], te
 # 2.1 Create and train the Naive Bayes Classifier
 classifier = MultinomialNB().fit(X_train, y_train)
 
-# 2.2 Classifiers prediction and actual values on the data set
-y_pred = classifier.predict(X_train)
+# 2.2 Classifiers prediction
+y_pred = classifier.predict(X_test)
 print(f"Prediction results (y_pred): \n{y_pred}\n")
 
 ## 3 | Model Evaluation ##
 """Evaluate model performance"""
-pred = classifier.predict(X_train)
-print(f"Classification report :\n{classification_report(y_train, pred)}\n")
-print(f"Confusion Matrix :\n{confusion_matrix(y_train, pred)}\n")
-print(f"Model accuracy : {round(accuracy_score(y_train, pred), 2)*100} %")
+print(f"Classification report :\n{classification_report(y_train, y_pred)}\n")
+print(f"Confusion Matrix :\n{confusion_matrix(y_train, y_pred)}\n")
+print(f"Model accuracy : {round(accuracy_score(y_train, y_pred), 2)*100} %")
