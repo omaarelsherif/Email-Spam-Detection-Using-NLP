@@ -29,9 +29,9 @@ Install all required packages :
 Human activites dataset contain about 5728 record which is a sample of an email<br>
 and a target column "type" which describe the state of an email spam or not.<br>
 <br>**Dataset features and target :**<br>
-![](Images/dataset_columns.png)<br>
+![](Images/Dataset_Columns.png)<br>
 <br>**Dataset head :**<br>
-![](Images/dataset_head.png)
+![](Images/Dataset_Head.png)
 
 <!-- CODING SECTIONS -->
 ## <br>**➲ Coding Sections**
