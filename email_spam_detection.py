@@ -14,6 +14,8 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+import nltk
+nltk.download('stopwords')
 
 ## 1 | Data Preprocessing ##
 """Prepare data before training"""
@@ -38,7 +40,9 @@ def process(text):
 print(f"Dataset head after cleaning punctuation and stopwords and then tokenizing it into words : \n{dataset['text'].head().apply(process)}\n")
 
 # 1.5 Convert the text into a matrix of token counts
-message = CountVectorizer(analyzer=process).fit_transform(dataset['text'])
+#message = CountVectorizer(analyzer=process).fit_transform(dataset['text'])
+#pickle.dump(message, open("Model/vector.pickel", "wb"))    # Save the vectorizer output message
+message = pickle.load(open("Model/vector.pickel", "rb"))    # Load the vectorizer output message
 
 # 1.6 Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(message, dataset['spam'], test_size=0.20, random_state=0)
@@ -55,6 +59,6 @@ print(f"Prediction results (y_pred): \n{y_pred}\n")
 
 ## 3 | Model Evaluation ##
 """Evaluate model performance"""
-print(f"Classification report :\n{classification_report(y_train, y_pred)}\n")
-print(f"Confusion Matrix :\n{confusion_matrix(y_train, y_pred)}\n")
-print(f"Model accuracy : {round(accuracy_score(y_train, y_pred), 2)*100} %")
+print(f"Classification report :\n{classification_report(y_test, y_pred)}\n")
+print(f"Confusion Matrix :\n{confusion_matrix(y_test, y_pred)}\n")
+print(f"Model accuracy : {round(accuracy_score(y_test, y_pred), 2)*100} %")
