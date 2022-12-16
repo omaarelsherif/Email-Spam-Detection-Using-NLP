@@ -6,6 +6,7 @@ Description:
 """
 
 ## Importing modules ##
+import pickle
 import numpy as np
 import pandas as pd
 from nltk.corpus import stopwords
@@ -24,10 +25,10 @@ nltk.download('stopwords')
 dataset = pd.read_csv('Dataset/emails.csv')
 print(f"Dataset head : \n{dataset.head()}\n")
 
-# 1.2 Check for duplicates and remove them 
+# 1.2 Check for duplicates and remove them
 dataset.drop_duplicates(inplace=True)
 
-# 1.3 Number of missing data for each column 
+# 1.3 Number of missing data for each column
 print(f"Number of missing data : \n{dataset.isnull().sum()}\n")
 
 # 1.4 Cleaning data from punctuation and stopwords and then tokenizing it into words (tokens)
