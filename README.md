@@ -3,7 +3,7 @@
 
 <!-- HEADER -->
 <p align="center">
-  <img src="Images/Email_Spam_Detection_Header.png"/>
+  <img src="Images/Email_Spam_Detection_Cover.png"/>
 </p>
 
 <!-- PROJECT DESCRIPTION -->
@@ -26,33 +26,24 @@ Install all required packages :
 
 <!-- THE DATASET -->
 ## <br>**➲ The Dataset**
-Human activites dataset contain about 5728 record which is a sample of an email<br>
-and a target column "type" which describe the state of an email spam or not.<br>
-<br>**Dataset features and target :**<br>
-![](Images/Dataset_Columns.png)<br>
-<br>**Dataset head :**<br>
-![](Images/Dataset_Head.png)
+Human activites dataset contain about 5728 record which is a sample of an email
+and a target column "spam" which describe the state of an email spam or not.<br>
 
 <!-- CODING SECTIONS -->
 ## <br>**➲ Coding Sections**
 In this part we will see the project code divided to sections as follows:
 <br>
 
-- Section 1 | Data Preprocessing :<br>
+- Section 1 | The Data :<br>
 In this section we aim to do some operations on the dataset before training the model on it,
-<br>processes like :
-  - Load dataset
-  - Check for duplicates and remove them 
-  - Check for missing data for each column 
-  - Cleaning data from punctuation and stopwords and then tokenizing it into words (tokens)
-  - Convert the text into a matrix of token counts
-  - Split the data into training and testing sets<br><br>
+processes like :
+  1. Data Loading : Load the dataset
+  2. Data Visualization : Visualize dataset features
+  3. Data Cleaning : Remove stopwords and duplicates values
+  4. Data Splitting : Split the dataset into training and testing sets<br><br>
 
-- Section 2 | Model Creation :<br>
-The dataset is ready for training, so we create a K-nearest Neighbors "KNN" model using scikit-learn and thin fit it to the data.<br>
-
-- Section 3 | Model Evaluation :<br>
-Finally we evaluate the model by getting accuracy, classification report and confusion matrix.
+- Section 2 | The Model :<br>
+The dataset is ready for training, so we create a naive classifier using scikit-learn and thin fit it to the data, and finally we evaluate the model by getting accuracy, classification report and confusion matrix<br>
 
 <!-- INSTALLATION -->
 ## ➲ Installation
@@ -60,26 +51,7 @@ Finally we evaluate the model by getting accuracy, classification report and con
    ```sh
    git clone https://github.com/omaarelsherif/Email-Spam-Detection-Using-Machine-Learning.git
    ```
-2. Run the code from cmd
-   ```sh
-   python email_spam_detection.py
-   ```
-
-<!-- OUTPUT -->
-## <br>**➲ Output**
-Now let's see the project output after running the code :
-
-**Dataset head :**<br>
-![](/Images/Output_1_Dataset_Head.png)<br><br>
-
-**Dataset missing data count :**<br>
-![](/Images/Output_2_Missing_Data.png)<br><br>
-
-**Dataset after cleaning puncituations and tokenizing text :**<br>
-![](/Images/Output_3_Dataset_After_Cleaning_And_Tokenizing.png)<br><br>
-
-**Classification report, confusion matrix and accuracy :**<br>
-![](/Images/Output_4_Class_report_Acc_Confusion_Matrix.png)<br>
+2. Open 'main.ipynb' in Google Colab or VScode and enjoy
 
 <!-- REFERENCES -->
 ## <br>**➲ References**
